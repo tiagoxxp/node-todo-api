@@ -60,7 +60,6 @@ app.get('/todos/:id', authenticate, (req,res) => {
  }).catch((e) => {
    res.status(400).send();
  });
-
 });
 
 
@@ -80,7 +79,6 @@ app.delete('/todos/:id', authenticate, async (req,res) => {
     if(!todo){
       res.status(404).send();
     }
-
     res.send({todo});
     } catch (error) {
        res.status(400).send();
@@ -92,11 +90,9 @@ app.patch('/todos/:id', authenticate, (req,res) => {
   
   var id = req.params.id;
   var body = _.pick(req.body,['text','completed']);
-
   if(!ObjectId.isValid(id)){
    return res.status(404).send();
   }
-
   if(_.isBoolean(body.completed) && body.completed){
     body.completedAt = new Date().getTime();
   }else{
@@ -122,7 +118,6 @@ app.patch('/todos/:id', authenticate, (req,res) => {
   }).catch((e) => {
     return res.status(404).send();
   });
-
 });
 
 
