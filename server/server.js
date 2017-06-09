@@ -16,7 +16,6 @@ const port = process.env.PORT;
 //set middleware
 app.use(bodyParser.json());
 // app.use(authenticate);
-
 app.post('/todos',authenticate, (req,res) => {
   var todo = new Todo({
     text: req.body.text,
