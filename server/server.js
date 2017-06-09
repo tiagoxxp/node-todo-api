@@ -95,9 +95,6 @@ app.patch('/todos/:id', authenticate, (req,res) => {
   }
   if(_.isBoolean(body.completed) && body.completed){
     body.completedAt = new Date().getTime();
-  }else{
-    body.completed = false;
-    body.completedAt = null;
   }
 
   Todo.findOneAndUpdate({
