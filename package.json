@@ -23,7 +23,7 @@
     "lodash": "^4.17.4",
     "moca": "^0.2.2",
     "mocha": "^3.2.0",
-    "mongodb": "^2.2.5",
+    "mongodb": "^3.6.1",
     "mongoose": "^4.8.4",
     "nodemon": "^1.11.0",
     "supertest": "^3.0.0",
